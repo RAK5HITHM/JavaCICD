@@ -1,5 +1,9 @@
 pipeline{
     agent { label 'kali-2'}
+    trigger{
+        pollSCM('* * * * *')
+    }
+
     stages{
         stage("Unit Testing")
         {
