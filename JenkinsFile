@@ -1,9 +1,11 @@
 pipeline{
     agent { label 'kali-2'}
     stages{
-        stage("Hi")
+        stage("Unit Testing")
         {
-            steps { echo "hi" }
+            steps { 
+                sh "mvn test"
+             }
         }
     }
 }
