@@ -1,0 +1,9 @@
+pipeline{
+    agent { label 'kali-2'}
+    stages{
+        stage("Hi")
+        {
+            steps { echo "hi" }
+        }
+    }
+}
