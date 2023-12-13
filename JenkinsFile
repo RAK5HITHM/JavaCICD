@@ -11,6 +11,7 @@ pipeline{
                 sh "echo 'mvn test'; pwd "
                 sh "ls"
                 sh " git clone https://github.com/Ashfaque-9x/register-app.git"
+                sh "ls -l"
              }
         }
     }
