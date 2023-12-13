@@ -8,7 +8,7 @@ pipeline{
         stage("Unit Testing")
         {
             steps { 
-                sh "echo 'mvn test', pwd "
+                sh "echo 'mvn test'; pwd "
                 sh "ls"
              }
         }
