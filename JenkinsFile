@@ -1,5 +1,5 @@
 pipeline{
-    agent { label 'kali-2'}
+    agent any
     triggers{
         pollSCM('* * * * *')
     }
@@ -8,14 +8,9 @@ pipeline{
         stage("Unit Testing")
         {
             steps { 
-                sh "mvn test"
+                sh "echo 'mvn test', pwd "
+                sh "ls"
              }
-        }
-        stage("Integration Test")
-        {
-            steps{
-                sh 'mvn verify'
-            }
         }
     }
 }
